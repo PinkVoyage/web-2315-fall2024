@@ -1,7 +1,6 @@
 @use "partials/colors" as colors;
-@use "partials/typography" as typography; 
-@use "vendors/normalize" as normalize;
-
+@use "partials/typography" as typography;
+@use "./vendor/normalize.scss";
 nav {
   background-color: colors.$darker-background;
   display: flex;
@@ -61,7 +60,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 80px; 
+  padding: 0 80px;
   position: absolute;
   bottom: 0;
   width: 100vw;
@@ -75,27 +74,26 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px; 
+  gap: 20px;
   padding: 50px;
 
   .text-section {
     flex: 1;
-    text-align: left;
+    text-align: center;
 
     h1 {
       color: colors.$tertiary-font-color;
-      font-family: "Roboto", sans-serif; 
+      font-family: "Roboto", sans-serif;
       font-size: 3rem;
       font-weight: bold;
     }
 
     h2 {
-     color: colors.$secondary-font-color;
+      color: colors.$secondary-font-color;
       font-family: typography.$primary-font;
       font-size: 2.5rem;
       font-weight: bold;
     }
-    
 
     .about-link {
       color: colors.$secondary-font-color;
@@ -117,12 +115,15 @@ nav {
 
   .image-section {
     flex: 1;
+    display: block;
+    justify-content: flex-end; 
 
     img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 8px; 
+      border-radius: 8px;
+      transform: translateX(20px); 
     }
   }
 }
@@ -131,15 +132,15 @@ nav {
   .content {
     flex-direction: row;
     padding: 80px;
-  }
 
-  .text-section {
-    h1 {
-      font-size: 3.5rem;
-    }
+    .text-section {
+      h1 {
+        font-size: 3.5rem;
+      }
 
-    h2 {
-      font-size: 3rem;
+      h2 {
+        font-size: 3rem;
+      }
     }
   }
 }
@@ -147,15 +148,15 @@ nav {
 @media (min-width: 1024px) {
   .content {
     padding: 100px;
-  }
 
-  .text-section {
-    h1 {
-      font-size: 4rem;
-    }
+    .text-section {
+      h1 {
+        font-size: 4rem;
+      }
 
-    h2 {
-      font-size: 3.5rem;
+      h2 {
+        font-size: 3.5rem;
+      }
     }
   }
 
