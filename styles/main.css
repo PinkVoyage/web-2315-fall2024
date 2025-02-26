@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+nav {
+  background-color: #271313;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+nav .logo {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #DB8D33;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer {
+  background-color: #808080;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  max-width: 100%;
+  left: 0;
+  font-size: 1rem;
+  min-height: 60px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+}
+.content .text-section {
+  flex: 1;
+  text-align: left;
+}
+.content .text-section h1 {
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.content .text-section h2 {
+  color: #DB8D33;
+  font-family: "Caveat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.content .text-section .about-link {
+  color: #DB8D33;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 2px solid #DB8D33;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.content .text-section .about-link:hover {
+  background-color: #DB8D33;
+  color: #808080;
+}
+.content .image-section {
+  flex: 1;
+}
+.content .image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    padding: 80px;
+  }
+  .text-section h1 {
+    font-size: 3.5rem;
+  }
+  .text-section h2 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .content {
+    padding: 100px;
+  }
+  .text-section h1 {
+    font-size: 4rem;
+  }
+  .text-section h2 {
+    font-size: 3.5rem;
+  }
+  .container {
+    background-color: navy;
+  }
+}/*# sourceMappingURL=main.css.map */
